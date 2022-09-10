@@ -12,3 +12,24 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const productsContainerEl = document.querySelector('.gallery');
+
+const makeProductCard = ({ url, alt }) => {
+  const listEl = document.createElement('li');
+  listEl.classList.add('list__item');
+
+  const imagesEl = document.createElement('img');
+  imagesEl.classList.add('img__item');
+  imagesEl.textContent = `${url}`;
+  imagesEl.textContent = `${alt}`;
+
+  listEl.append(imagesEl);
+
+  return listEl;
+};
+
+const elements = images.map(makeProductCard);
+
+console.log(elements);
+productsContainerEl.append(...images);
