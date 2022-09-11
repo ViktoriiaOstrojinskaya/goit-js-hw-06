@@ -13,23 +13,23 @@ const images = [
   },
 ];
 
-const productsContainerEl = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
-const makeProductCard = ({ url, alt }) => {
-  const listEl = document.createElement('li');
-  listEl.classList.add('list__item');
+const imagesEl = images
+  .map(
+    image =>
+      `<li><img src="${image.url}" 
+      alt="${image.alt}"
+      width = 200"></li>`
+  )
+  .join('');
 
-  const imagesEl = document.createElement('img');
-  imagesEl.classList.add('img__item');
-  imagesEl.textContent = `${url}`;
-  imagesEl.textContent = `${alt}`;
+gallery.insertAdjacentHTML('afterbegin', imagesEl);
 
-  listEl.append(imagesEl);
-
-  return listEl;
-};
-
-const elements = images.map(makeProductCard);
-
-console.log(elements);
-productsContainerEl.append(...images);
+gallery.style.marginTop = '0';
+gallery.style.marginBottom = '0';
+gallery.style.paddingLeft = '0';
+gallery.style.display = 'flex';
+gallery.style.flexWrap = 'wrap';
+gallery.style.justifyContent = 'center';
+gallery.style.gap = '30px';
