@@ -4,15 +4,20 @@ const refs = {
   valueEl: document.querySelector('#value'),
 };
 
-const counterValue = 0;
+let counterValue = 0;
 
-refs.buttonDecrement.addEventListener('click', onDecrementValue);
-refs.buttonIncrement.addEventListener('click', onIncrementValue);
-
-function onDecrementValue() {
-  refs.valueEl.textContent = counterValue - 1;
+function account() {
+  refs.valueEl.textContent = counterValue.toString();
 }
 
-function onIncrementValue() {
-  refs.valueEl.textContent = counterValue + 1;
-}
+refs.buttonDecrement.addEventListener('click', () => {
+  counterValue += 1;
+  account();
+});
+
+refs.buttonIncrement.addEventListener('click', () => {
+  counterValue -= 1;
+  account();
+});
+
+account();

@@ -26,10 +26,10 @@ const imagesEl = images
 
 gallery.insertAdjacentHTML('afterbegin', imagesEl);
 
-gallery.style.marginTop = '0';
-gallery.style.marginBottom = '0';
-gallery.style.paddingLeft = '0';
-gallery.style.display = 'flex';
-gallery.style.flexWrap = 'wrap';
-gallery.style.justifyContent = 'center';
-gallery.style.gap = '30px';
+// gallery.style.marginTop = '0';
+// gallery.style.marginBottom = '0';
+// gallery.style.paddingLeft = '0';
+// gallery.style.display = 'flex';
+// gallery.style.flexWrap = 'wrap';
+// gallery.style.justifyContent = 'center';
+// gallery.style.gap = '30px';

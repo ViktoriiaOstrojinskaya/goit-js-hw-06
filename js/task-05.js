@@ -6,9 +6,5 @@ const refs = {
 refs.textInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  if (event === '') {
-    refs.textOutput.textContent = 'Anonymous';
-  } else {
-    refs.textOutput.textContent = event.currentTarget.value;
-  }
+  refs.textOutput.textContent = event.currentTarget.value;
 }
