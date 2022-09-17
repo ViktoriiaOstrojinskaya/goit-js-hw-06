@@ -10,14 +10,15 @@ function account() {
   refs.valueEl.textContent = counterValue.toString();
 }
 
-refs.buttonDecrement.addEventListener('click', () => {
-  counterValue += 1;
-  account();
-});
+refs.buttonDecrement.addEventListener('click', onClickDecrement);
+refs.buttonIncrement.addEventListener('click', onClickIncrement);
 
-refs.buttonIncrement.addEventListener('click', () => {
+function onClickDecrement() {
   counterValue -= 1;
   account();
-});
+}
 
-account();
+function onClickIncrement() {
+  counterValue += 1;
+  account();
+}

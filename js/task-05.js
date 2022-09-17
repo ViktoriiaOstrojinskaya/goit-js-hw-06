@@ -6,5 +6,5 @@ const refs = {
 refs.textInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  refs.textOutput.textContent = event.currentTarget.value;
+  refs.textOutput.textContent = event.currentTarget.value.trim();
 }
