@@ -13,5 +13,3 @@ const makeIngredientsEl = elements => {
 
 const nameIngredientsEl = makeIngredientsEl(ingredients);
 ingredientsEl.append(...nameIngredientsEl);
-
-console.log(nameIngredientsEl);
