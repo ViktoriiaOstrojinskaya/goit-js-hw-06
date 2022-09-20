@@ -8,9 +8,7 @@ console.dir(refs.textOutput);
 refs.textInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  if (event.currentTarget.value) {
-    refs.textOutput.textContent = event.currentTarget.value.trim();
-  } else {
-    refs.textOutput.textContent = '123456';
-  }
+  event.currentTarget.value
+    ? (refs.textOutput.textContent = event.currentTarget.value.trim())
+    : (refs.textOutput.textContent = 'Anonymous');
 }
