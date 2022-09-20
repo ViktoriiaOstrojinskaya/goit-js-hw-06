@@ -5,7 +5,11 @@ input.addEventListener('blur', onChangeColor);
 
 function onChangeColor(event) {
   const outInputLength = event.currentTarget.value.length;
-  outInputLength === Number(input.dataset.length)
-    ? input.classList.toggle('valid')
-    : input.classList.toggle('invalid');
+  if (outInputLength === Number(input.dataset.length)) {
+    input.classList.remove('invalid');
+    return input.classList.add('valid');
+  } else {
+    input.classList.remove('valid');
+    return input.classList.add('invalid');
+  }
 }
